@@ -1,0 +1,33 @@
+<!-- <import src="index.skeleton.wxml" />
+<template is="skeleton" wx:if="{{loading}}" /> -->
+
+<view class="user">
+  <view class="top">
+    <image class="image" mode="widthFix" src="{{avatar}}" />
+    <view style="display: flex;justify-content:space-between;flex: 1;align-items: center;" bindtap="goLogin">
+      <view class="go-to-login" >
+        {{username}}
+      </view>
+    </view>
+  </view>
+  <view>
+    <van-cell icon="setting-o" size="large" title="我的配置" />
+    <van-cell icon="bulb-o" is-link title="设备监控" bindtap="tapDevice" />
+    <van-cell icon="share-o" title="分享好友" is-link bind:click="onShareFriend" />
+    <van-share-sheet show="{{ showShare }}" title="分享" options="{{ options }}" bind:select="onSelect" bind:close="onCloseShare" />
+    <van-cell is-link title="退出" icon="close" bind:click="goLogout" />
+  </view>
+</view>
+
+<van-popup style="position: relative;z-index: 999999;" show="{{ isLoginPopup }}" bind:close="onClose">
+  <van-cell-group>
+    <van-field label="用户名" placeholder="请输入用户名" error-message="{{username_error?'请输入用户名':''}}" bind:input="onInputUsername" />
+    <van-field type="password" label="密码" placeholder="请输入密码" error-message="{{userpass_error?'请输入密码':''}}" border="{{ false }}" bind:input="onInputPassword" />
+  </van-cell-group>
+  <van-button style="padding: 20rpx;" round block type="primary" bind:click="login">登录</van-button>
+</van-popup>
+
+<van-dialog use-slot title="退出确认框" show="{{ isShowLogoutDialog }}" show-cancel-button bind:close="onClose" bind:confirm="isLogoutOK">
+  <view style="text-align: center;margin: 80rpx;">
+    您确认要退出当前用户？</view>
+</van-dialog>

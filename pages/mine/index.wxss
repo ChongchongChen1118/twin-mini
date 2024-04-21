@@ -1,0 +1,20 @@
+/* @import "./index.skeleton.wxss"; */
+.user .top {
+  padding: 40rpx 20rpx;
+  height: 140rpx;
+  background-color: #009f72;
+  display: flex;
+  color: #fff;
+}
+.user .top .image {
+  width: 150rpx;
+  border-radius: 50%;
+}
+.user .top .go-to-login {
+  margin-left: 20rpx;
+}
+.van-popup {
+  width: 90%;
+  padding: 30rpx;
+  border-radius: 16rpx;
+}

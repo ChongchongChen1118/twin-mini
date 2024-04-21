@@ -1,0 +1,21 @@
+.font-style {
+  color: aquamarine;
+}
+
+.skyblue {
+  background-color: #009f72;
+}
+
+.green {
+  background-color: #009f72;
+}
+
+.grey {
+  background-color: #009f72;
+}
+
+.txtLoc {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 6rpx;
+}

@@ -1,0 +1,9 @@
+
+  <view class="container" >
+    <ec-canvas style="margin: 10rpx 20rpx;" id="mychart-dom-line" canvas-id="mychart-line" ec="{{ec}}">
+    </ec-canvas>
+  </view>
+  <van-icon style="margin-top: 35rpx;margin-left: 30rpx;" name="down" bindtap="saveImage" />
+  
+
+<van-notice-bar color="#009f72" left-icon="volume-o" background="#ecf9ff" text="显示最近10条记录状态，1条记录/每半小时" />

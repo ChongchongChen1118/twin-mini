@@ -1,0 +1,24 @@
+<!-- <van-tabs title-active-color="#009f72" color="#009f72" sticky>
+  <van-tab title="生长指数分析">
+
+  </van-tab>
+  <van-tab title="多维度阶段预测">
+
+    
+
+  </van-tab>
+  
+
+</van-tabs> -->
+<!-- <view class="container">
+  <ec-canvas id="mychart-dom-line" canvas-id="mychart-line" ec="{{ec}}">
+  </ec-canvas>
+</view> -->
+<view class="container">
+  <ec-canvas id="mychart-dom-pie" canvas-id="mychart-pie" ec="{{ ec }}"></ec-canvas>
+</view>
+<van-popup show="{{ isShowed }}" bind:close="onClose">
+  <view style="width: 100vw;height: 100vh;">
+    请先到场地管理查询监控设备记录，再查看记录分析视图。
+  </view>
+</van-popup>

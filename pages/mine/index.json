@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "van-cell-group": "@vant/weapp/cell-group/index",
+    "van-field": "@vant/weapp/field/index"
+  },
+  "navigationBarTitleText": "个人数据"
+}

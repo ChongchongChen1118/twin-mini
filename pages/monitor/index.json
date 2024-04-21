@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "ec-canvas": "../../ec-canvas/ec-canvas",
+    "van-notice-bar": "@vant/weapp/notice-bar/index"
+  },
+  "enablePullDownRefresh": true,
+  "navigationBarTitleText": "监控记录"
+}

@@ -1,0 +1,11 @@
+<!--pages/result/result.wxml-->
+<view>
+  <image src="{{imgUrl}}" style="width: 700rpx; height: 450rpx; margin-left: 25rpx; margin-right: 25rpx; margin-top: 25rpx;"	mode="aspectFill"></image>
+  <view class="results" wx:for="{{results}}" wx:key="index">
+  <view style="margin-top: 30rpx; margin-left: 25rpx; margin-right: 25rpx;">
+    <view style="color: #009F72; font-weight: bold;">品种：{{item.name}}</view>
+    <view style="color: #009F72; font-weight: bold;">相似度：{{item.score}}</view>
+    <view>品种信息：{{item.baike_info.description}}</view>
+  </view>
+  </view>
+</view>

@@ -1,0 +1,5 @@
+<!--index.wxml-->
+<view class="container1">
+  <van-button type="primary" color="#009F72" bindtap="uploadImg">相册上传</van-button>
+  <van-button type="primary" color="#009F72" bindtap="pailoadImg" style="margin-top: 50rpx;">拍照上传</van-button>
+</view>

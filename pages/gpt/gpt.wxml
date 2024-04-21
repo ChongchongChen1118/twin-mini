@@ -1,0 +1,12 @@
+<van-search
+  model:value="{{ value }}"
+  shape="round"
+  background="#009F72"
+  placeholder="请输入您想要向人工智能提问的问题"
+  use-action-slot
+  bind:search="onClick"
+>
+<view slot="action" bind:tap="onClick">搜索</view>
+</van-search>
+<view style="padding: 30rpx; font-size: 16px;" wx:if="{{gpt}}">{{gpt}}</view>
+<image wx:else src="https://mp-d4bf0096-2db6-4061-9c32-da817c708bcf.cdn.bspapp.com/蓝紫色机器人编程插画科技科技分享中文信息图表.png" mode="aspectFit" style="width: 100%; height: 920rpx; margin-top: 30rpx;"/>

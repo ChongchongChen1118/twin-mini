@@ -1,0 +1,14 @@
+.van-button{
+  --button-primary-background-color: #009f72;
+  
+}
+.txtStyle{
+  font-size: x-large;
+  height: 100vh;
+  width: 100%;
+  color: #333;
+  background-color:gainsboro;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}

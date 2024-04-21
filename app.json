@@ -1,0 +1,78 @@
+{
+  "pages": [
+    "pages/venues/index",
+    "pages/visualization/index",
+    "pages/mine/index",
+    "pages/device/index",
+    "pages/monitor/index",
+    "pages/gpt/gpt",
+    "pages/rengong/rengong",
+    "pages/index/index",
+    "pages/result/result",
+    "pages/camera/camera"
+  ],
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/venues/index",
+        "text": "场地管理",
+        "iconPath": "/assets/icons/venues-unselected.png",
+        "selectedIconPath": "/assets/icons/venues.png"
+      },
+      {
+        "pagePath": "pages/visualization/index",
+        "text": "预测分析",
+        "iconPath": "/assets/icons/visual-unselected.png",
+        "selectedIconPath": "/assets/icons/visual.png"
+      },
+      {
+        "pagePath": "pages/rengong/rengong",
+        "text": "人工智能",
+        "iconPath": "/assets/icons/head.png",
+        "selectedIconPath": "/assets/icons/head1.png"
+      },
+      {
+        "pagePath": "pages/mine/index",
+        "text": "个人数据",
+        "iconPath": "/assets/icons/p-center-unselected.png",
+        "selectedIconPath": "/assets/icons/p-center.png"
+      }
+    ],
+    "selectedColor": "#009f72",
+    "color": "#707070"
+  },
+  "window": {
+    "backgroundTextStyle": "dark",
+    "backgroundColor": "#009f72",
+    "navigationBarBackgroundColor": "#009f72",
+    "navigationBarTitleText": "智能温室种植平台",
+    "navigationBarTextStyle": "white"
+  },
+  "sitemapLocation": "sitemap.json",
+  "lazyCodeLoading": "requiredComponents",
+  "usingComponents": {
+    "van-button": "@vant/weapp/button/index",
+    "van-tab": "@vant/weapp/tab/index",
+    "van-tabs": "@vant/weapp/tabs/index",
+    "van-cell": "@vant/weapp/cell/index",
+    "van-cell-group": "@vant/weapp/cell-group/index",
+    "van-image": "@vant/weapp/image/index",
+    "van-row": "@vant/weapp/row/index",
+    "van-col": "@vant/weapp/col/index",
+    "van-divider": "@vant/weapp/divider/index",
+    "van-dialog": "@vant/weapp/dialog/index",
+    "van-icon": "@vant/weapp/icon/index",
+    "van-nav-bar": "@vant/weapp/nav-bar/index",
+    "van-share-sheet": "@vant/weapp/share-sheet/index",
+    "van-toast": "@vant/weapp/toast/index",
+    "van-grid": "@vant/weapp/grid/index",
+    "van-grid-item": "@vant/weapp/grid-item/index",
+    "van-dropdown-menu": "@vant/weapp/dropdown-menu/index",
+    "van-dropdown-item": "@vant/weapp/dropdown-item/index",
+    "van-switch": "@vant/weapp/switch/index",
+    "van-popup": "@vant/weapp/popup/index",
+    "van-search": "@vant/weapp/search/index"
+  },
+  "permission":{
+  }
+}

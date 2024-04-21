@@ -1,0 +1,51 @@
+<!-- <view class="grey" style="height:{{menuInfo.bottom}}px;">
+  <view class="skyblue" style="height:{{menuInfo.top}}px;">
+    <view class="green" style="height:{{systemInfo.statusBarHeight}}px;">
+    </view>
+  </view>
+  <view style="color: #fff;font-size: 38rpx;display: flex;  justify-content: center; align-items: center; margin-top: 12rpx;">农业数字孪生平台</view>
+</view> -->
+<van-dropdown-menu active-color="var(--themeColor)">
+  <van-dropdown-item title="全部场地" options="{{ venueList }}" bind:change="onChangeVenue" />
+  <van-dropdown-item title="所种植物" options="{{ plantList }}" bind:change="onChangePlant" />
+  <van-dropdown-item title="监控设备" options="{{ deviceList }}" bind:change="onChangeDevice" />
+</van-dropdown-menu>
+
+<van-cell-group wx:if="{{vFlag===1}}" wx:for="{{venues}}" inset wx:key="id">
+  <van-divider contentPosition="center" custom-style="color: #009f72; border-color: #009f72; font-size: 32rpx;">
+    {{item.name}}
+  </van-divider>
+  <van-cell title="场地" value="{{item.name}}" />
+  <van-cell title="位置" value="{{item.province+item.city+item.area}}" />
+  <van-cell title="地址" value="{{item.address}}" />
+  <van-cell title="拥有者" value="{{item.owner}}" />
+  <van-cell title="面积" value="{{item.siteArea}}亩" />
+  <van-cell title="使用状态" value="{{item.status==='1'?'正常':'停用'}}" />
+
+</van-cell-group>
+
+<van-cell-group wx:if="{{vFlag===2}}" wx:for="{{plants}}" inset wx:key="id">
+  <van-divider contentPosition="center" custom-style="color: #009f72; border-color: #009f72; font-size: 32rpx;">
+    {{item.name}}
+  </van-divider>
+  <van-cell title="所种植物" value="{{item.name}}" />
+  <van-cell title="类型" value="{{item.type}}" />
+  <van-cell title="生命周期" value="{{item.lifeCircle}}年" />
+  <van-cell title="种植时间" value="{{item.createTime}}" />
+</van-cell-group>
+
+<van-cell-group wx:if="{{vFlag===3}}" wx:for="{{devices}}" inset wx:key="id">
+  <van-cell wx:if="{{deviceCount>=1}}" title="设备状态" value="共计{{deviceCount}}台 在线{{deviceStatus}}台" />
+  <van-notice-bar color="#009f72" left-icon="volume-o" background="#ecf9ff" text="点击下方图标查看近期植物的指标变化曲线" />
+  <van-grid column-num="3">
+    <view bindtap="onHistoryListPage" data-id="{{item.id}}" wx:key="index" wx:for="{{ items }}">
+
+      <van-grid-item style="text-align: center;" icon="{{item.icon}}" custom-class="font-style" text="{{item.text}}\n{{item.current}}" />
+
+    </view>
+  </van-grid>
+</van-cell-group>
+<van-popup show="{{ isShowed }}" bind:close="onPopupClose">
+  <image src="{{imgUrl}}" mode="aspectFit" show-menu-by-longpress />
+  <text class="txtLoc">拍照时间：{{createTime}}</text>
+</van-popup>
